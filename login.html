@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login - ROI Command Center</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              darkbg: "#0F172A",
+              cardbg: "#1E293B",
+              primary: "#3B82F6",
+              accent: "#10B981",
+            },
+          },
+        },
+      };
+    </script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Outfit", sans-serif;
+      }
+    </style>
+  </head>
+  <body
+    class="bg-darkbg text-gray-200 antialiased h-screen flex items-center justify-center p-4"
+  >
+    <div
+      class="w-full max-w-md bg-cardbg rounded-2xl shadow-2xl border border-gray-700/60 p-8 relative overflow-hidden"
+    >
+      <!-- Glow effect -->
+      <div
+        class="absolute -top-10 -right-10 w-40 h-40 bg-primary/20 rounded-full blur-3xl"
+      ></div>
+      <div
+        class="absolute -bottom-10 -left-10 w-40 h-40 bg-accent/20 rounded-full blur-3xl"
+      ></div>
+
+      <div class="relative z-10">
+        <div class="text-center mb-8">
+          <h1
+            class="text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent mb-2"
+          >
+            🔥 ROI Center
+          </h1>
+          <p class="text-sm text-gray-400">
+            Login to manage mappings & whitelists
+          </p>
+        </div>
+
+        <form
+          action="https://roi.ntbksense.id/login"
+          method="POST"
+          class="space-y-5"
+        >
+          <input
+            type="hidden"
+            name="_token"
+            value="1lsInMLNzuJ5yu7eEtl91JU8Z5UxTYxRfrkfOmhP"
+            autocomplete="off"
+          />
+          <div>
+            <label class="block text-sm font-medium text-gray-400 mb-1"
+              >Username</label
+            >
+            <input
+              type="text"
+              name="username"
+              required
+              value=""
+              class="w-full bg-gray-900 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition placeholder-gray-600"
+              placeholder="e.g., kevin01"
+            />
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-gray-400 mb-1"
+              >Password</label
+            >
+            <input
+              type="password"
+              name="password"
+              required
+              class="w-full bg-gray-900 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition placeholder-gray-600"
+              placeholder="••••••••"
+            />
+          </div>
+
+          <button
+            type="submit"
+            class="w-full bg-gradient-to-r from-primary to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white font-bold py-3.5 rounded-xl shadow-lg shadow-blue-500/30 transition transform hover:-translate-y-0.5 mt-2"
+          >
+            Enter Dashboard
+          </button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
